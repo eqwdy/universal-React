@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  --color-button-outline: black;
 }
 @media (max-width: 1023px) {
   .card {
@@ -86,7 +85,7 @@
   transform: translateY(-50%) rotate(180deg);
   width: var(--button-arrow-width);
   aspect-ratio: 1;
-  background: url("../../../icons/arrow-down-black.svg") center/cover no-repeat;
+  background: var(--arrow-down-icon-url) center/cover no-repeat;
   transition: var(--transition-button);
 }
 .cardDescriptionButton[aria-expanded="true"]::after {

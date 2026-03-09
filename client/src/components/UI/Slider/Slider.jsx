@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import cl from "./Slider.module.css";
-import { ReactComponent as ArrowLeftIncon } from "../../../icons/arrow-circle-left.svg";
-import { ReactComponent as ArrowRightIncon } from "../../../icons/arrow-circle-right.svg";
 import WorksImagesStore from "../../../store/WorksImagesStore";
 
 const Slider = ({
@@ -76,7 +74,7 @@ const Slider = ({
           ? slides?.slice(0, endPos).map((slide) => (
               <li className={cl.sliderItem} ref={slideRef} key={slide.id}>
                 <img
-                  src={`${process.env.REACT_APP_API_URL}/${process.env.REACT_APP_API_URL_SLIDES}/${slide.img}`}
+                  src={`${process.env.REACT_APP_API_URL_SLIDES}/${slide.img}`}
                   alt="Одна из наших работ"
                 />
               </li>
@@ -84,7 +82,7 @@ const Slider = ({
           : slides?.map((slide) => (
               <li className={cl.sliderItem} ref={slideRef} key={slide.id}>
                 <img
-                  src={`${process.env.REACT_APP_API_URL}/${process.env.REACT_APP_API_URL_WORKS_IMAGES}/${slide.img}`}
+                  src={`${process.env.REACT_APP_API_URL_WORKS_IMAGES}/${slide.img}`}
                   alt="Одна из наших работ"
                 />
               </li>
@@ -99,7 +97,11 @@ const Slider = ({
             aria-controls="slider"
             onClick={async () => await moveSlide(false)}
           >
-            <ArrowLeftIncon />
+            <img
+              src={`${process.env.REACT_APP_API_URL_ICONS}/arrow-circle-left.svg`}
+              alt=""
+              loading="lazy"
+            />
           </button>
           <button
             type="button"
@@ -108,7 +110,11 @@ const Slider = ({
             aria-controls="slider"
             onClick={async () => await moveSlide(true)}
           >
-            <ArrowRightIncon />
+            <img
+              src={`${process.env.REACT_APP_API_URL_ICONS}/arrow-circle-right.svg`}
+              alt=""
+              loading="lazy"
+            />
           </button>
         </>
       ) : (
@@ -120,7 +126,11 @@ const Slider = ({
             aria-controls="slider"
             onClick={async () => await moveSlide(false)}
           >
-            <ArrowLeftIncon />
+            <img
+              src={`${process.env.REACT_APP_API_URL_ICONS}/arrow-circle-left.svg`}
+              alt=""
+              loading="lazy"
+            />
           </button>
           <button
             type="button"
@@ -129,7 +139,11 @@ const Slider = ({
             aria-controls="slider"
             onClick={async () => await moveSlide(true)}
           >
-            <ArrowRightIncon />
+            <img
+              src={`${process.env.REACT_APP_API_URL_ICONS}/arrow-circle-right.svg`}
+              alt=""
+              loading="lazy"
+            />
           </button>
         </div>
       )}

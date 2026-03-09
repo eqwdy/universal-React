@@ -10,7 +10,7 @@
   background: none;
   position: relative;
 }
-.svgButton svg {
+.svgButton img {
   width: 30px;
   aspect-ratio: 1;
   transition: 0.1s ease;

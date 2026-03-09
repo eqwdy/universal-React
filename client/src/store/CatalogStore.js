@@ -28,7 +28,6 @@ class Catalog {
     this.status = "loading";
     try {
       const response = await CardService.getCards();
-      console.log(response);
       runInAction(() => {
         this.items = response.data.products;
         this.status = "succeeded";

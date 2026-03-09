@@ -23,7 +23,7 @@ const Card = ({ id, title, description, price, imageSrc }) => {
       <article className={cl.card}>
         <div className={cl.cardImg}>
           <img
-            src={`${process.env.REACT_APP_API_URL}/${process.env.REACT_APP_API_URL_PRODUCTS}/${imageSrc}`}
+            src={`${process.env.REACT_APP_API_URL_PRODUCTS}/${imageSrc}`}
             alt={title}
             loading="lazy"
             width="250"

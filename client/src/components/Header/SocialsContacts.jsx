@@ -1,7 +1,4 @@
 import React from "react";
-import { ReactComponent as MailImage } from "../../icons/mail.svg";
-import { ReactComponent as VkLogoImage } from "../../icons/vk logo.svg";
-import { ReactComponent as WhatsappLogoImage } from "../../icons/whatsapp logo.svg";
 
 const SocialsContacts = () => {
   return (
@@ -11,21 +8,39 @@ const SocialsContacts = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <MailImage />
+        <img
+          src={`${process.env.REACT_APP_API_URL_ICONS}/mail-black.svg`}
+          alt=""
+          loading="lazy"
+          width="25px"
+          height="25px"
+        />
       </a>
       <a
         href="https://vk.com/id516711688"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <VkLogoImage color="blue" />
+        <img
+          src={`${process.env.REACT_APP_API_URL_ICONS}/vk logo.svg`}
+          alt=""
+          loading="lazy"
+          width="25px"
+          height="25px"
+        />
       </a>
       <a
         href="https://wa.me/79780829838"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <WhatsappLogoImage />
+        <img
+          src={`${process.env.REACT_APP_API_URL_ICONS}/whatsapp logo.svg`}
+          alt=""
+          loading="lazy"
+          width="25px"
+          height="25px"
+        />
       </a>
     </>
   );

@@ -3,7 +3,6 @@ import cl from "./AdminRequest.module.css";
 import Button from "../../UI/button/Button";
 import { useAccordion } from "../../../hooks/useAccordion";
 import ButtonRed from "../../UI/button/ButtonRed";
-import { ReactComponent as ArrowIcon } from "../../../icons/arrow-down.svg";
 import ProductsTable from "../../UI/table/ProductsTable";
 import AdminRequestsStore from "../../../store/AdminRequestsStore";
 import { usePopupContext } from "../../../context/PopupContext";
@@ -56,7 +55,11 @@ const AdminRequest = ({ request }) => {
             type="button"
             className={`${cl.requestOpenStatus} buttonReset`}
           >
-            <ArrowIcon />
+            <img
+              src={`${process.env.REACT_APP_API_URL_ICONS}/arrow-down.svg`}
+              alt=""
+              loading="lazy"
+            />
           </button>
         </div>
       </header>

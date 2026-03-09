@@ -1,8 +1,6 @@
 import React, { use, useEffect, useState } from "react";
 import cl from "./BurgerMenu.module.css";
 import Navbar from "../UI/Navbar/Navbar";
-import { ReactComponent as ClockIcon } from "../../icons/clock.svg";
-import { ReactComponent as PhoneIcon } from "../../icons/phone.svg";
 
 const BurgerMenu = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
@@ -30,14 +28,22 @@ const BurgerMenu = () => {
         <address className={cl.burgerContacts}>
           <ul className={cl.burgerContactsItems}>
             <li className={cl.burgerContactsItem}>
-              <ClockIcon />
+              <img
+                src={`${process.env.REACT_APP_API_URL_ICONS}/phone.svg`}
+                alt=""
+                loading="lazy"
+              />
               <span>
                 Пн-Сб
                 <br /> 07:30–15:00
               </span>
             </li>
             <li className={cl.burgerContactsItem}>
-              <PhoneIcon />
+              <img
+                src={`${process.env.REACT_APP_API_URL_ICONS}/auth.svg`}
+                alt=""
+                loading="lazy"
+              />
               <span>+7(978) 082-98-38</span>
             </li>
           </ul>

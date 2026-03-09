@@ -19,7 +19,7 @@
   transform: translateY(-50%);
   width: 15px;
   aspect-ratio: 1;
-  background: url("../../../../icons/Arrow.svg") center/cover no-repeat;
+  background: var(--arrow-icon-url) center/cover no-repeat;
 }
 
 @media (hover: hover) {

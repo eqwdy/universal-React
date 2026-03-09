@@ -41,13 +41,13 @@
   align-items: center;
   transition: var(--transition-button);
 }
-.requestOpenStatus > svg {
+.requestOpenStatus > img {
   width: 30px;
   aspect-ratio: 1;
   fill: black;
   transition: var(--transition-button);
 }
-.requestOpenStatus:hover > svg {
+.requestOpenStatus:hover > img {
   opacity: 0.6;
 }
 .request[aria-expanded="true"] .requestOpenStatus {

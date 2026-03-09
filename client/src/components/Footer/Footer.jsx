@@ -1,8 +1,5 @@
 import React from "react";
 import cl from "./Footer.module.css";
-import { ReactComponent as PhoneIcon } from "../../icons/phone.svg";
-import { ReactComponent as MarkerIcon } from "../../icons/marker.svg";
-import { ReactComponent as MailIcon } from "../../icons/mail.svg";
 import Navbar from "../UI/Navbar/Navbar";
 
 const Footer = () => {
@@ -14,7 +11,11 @@ const Footer = () => {
           <ul className={cl.ContactsItems}>
             <li className={cl.ContactsItem}>
               <a href="tel:+79780829838" className={cl.ContactsLink}>
-                <PhoneIcon />
+                <img
+                  src={`${process.env.REACT_APP_API_URL_ICONS}/phone.svg`}
+                  alt=""
+                  loading="lazy"
+                />
                 <span>+7 978 082-98-38</span>
               </a>
             </li>
@@ -25,7 +26,11 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MailIcon />
+                <img
+                  src={`${process.env.REACT_APP_API_URL_ICONS}/mail.svg`}
+                  alt=""
+                  loading="lazy"
+                />
                 <span>uniwersalstroj2008@mail.ru</span>
               </a>
             </li>
@@ -36,7 +41,11 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MarkerIcon />
+                <img
+                  src={`${process.env.REACT_APP_API_URL_ICONS}/marker.svg`}
+                  alt=""
+                  loading="lazy"
+                />
                 <span>г. Феодосия, Переулок Керченский 4 В</span>
               </a>
             </li>

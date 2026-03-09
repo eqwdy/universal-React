@@ -43,8 +43,9 @@
   line-height: 1.2;
 }
 
-.ContactsLink svg {
-  flex: 0 0 60px;
+.ContactsLink img {
+  flex-shrink: 0;
+  width: 60px;
   aspect-ratio: 1;
 }
 @media (max-width: 830px) {
@@ -57,7 +58,7 @@
   }
 }
 @media (max-width: 830px) {
-  .ContactsLink svg {
+  .ContactsLink img {
     flex: 0 0 30px;
   }
 }
@@ -87,10 +88,10 @@
   align-items: start;
   row-gap: 10px;
 }
-.Nav svg {
+.Nav img {
   color: white;
 }
-.Nav svg:hover {
+.Nav img:hover {
   color: rgb(194, 194, 194);
 }
 .NavTitle {

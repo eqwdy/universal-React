@@ -3,7 +3,6 @@ import cl from "./Request.module.css";
 import { useAccordion } from "../../hooks/useAccordion";
 import UserRequestsStore from "../../store/UserRequestsStore";
 import ButtonRed from "../UI/button/ButtonRed";
-import { ReactComponent as ArrowIcon } from "../../icons/arrow-down.svg";
 import ProductsTable from "../UI/table/ProductsTable";
 import { usePopupContext } from "../../context/PopupContext";
 import normalizeProducts from "../../utils/normalizeProducts";
@@ -81,7 +80,11 @@ const Request = ({ request }) => {
             type="button"
             className={`${cl.requestOpenStatus} buttonReset`}
           >
-            <ArrowIcon />
+            <img
+              src={`${process.env.REACT_APP_API_URL_ICONS}/arrow-down.svg`}
+              alt=""
+              loading="lazy"
+            />
           </button>
         </div>
       </header>

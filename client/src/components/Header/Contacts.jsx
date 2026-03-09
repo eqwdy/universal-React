@@ -1,8 +1,6 @@
 import React from "react";
 import cl from "./Header.module.css";
 import { Link } from "react-router-dom";
-import { ReactComponent as MarkerImage } from "../../icons/marker.svg";
-import { ReactComponent as PhoneImage } from "../../icons/phone.svg";
 
 const Contacts = () => {
   return (
@@ -11,7 +9,13 @@ const Contacts = () => {
         to="tel:+79780829838"
         className={`${cl.headerContactsPhone} linkReset`}
       >
-        <PhoneImage width="25px" height="25px" />
+        <img
+          src={`${process.env.REACT_APP_API_URL_ICONS}/phone-black.svg`}
+          alt=""
+          loading="lazy"
+          width="25px"
+          height="25px"
+        />
         <span>+7 978 082-98-38</span>
       </Link>
       <Link
@@ -20,7 +24,13 @@ const Contacts = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <MarkerImage width="25px" height="25px" />
+        <img
+          src={`${process.env.REACT_APP_API_URL_ICONS}/marker-black.svg`}
+          alt=""
+          loading="lazy"
+          width="25px"
+          height="25px"
+        />
         <span>г. Феодосия, Переулок Керченский 4 В</span>
       </Link>
     </>

@@ -5,15 +5,21 @@ import { BrowserRouter } from "react-router-dom";
 import { ModalProvider } from "./context/ModalContext";
 import { PopupContextProvider } from "./context/PopupContext";
 import AppRouter from "./components/AppRouter";
+import ModalRequest from "./components/Modal/ModalRequest";
+import InfoPopup from "./components/UI/popup/InfoPopup";
 
 function App() {
   document.documentElement.style.setProperty(
-    "--api-url",
-    process.env.REACT_APP_API_URL,
-  );
-  document.documentElement.style.setProperty(
     "--hero-bg-url",
     `url(${process.env.REACT_APP_API_URL}/assets/hero-background.jpeg)`,
+  );
+  document.documentElement.style.setProperty(
+    "--arrow-down-icon-url",
+    `url(${process.env.REACT_APP_API_URL_ICONS}/arrow-down-black.svg)`,
+  );
+  document.documentElement.style.setProperty(
+    "--arrow-icon-url",
+    `url(${process.env.REACT_APP_API_URL_ICONS}/arrow.svg)`,
   );
 
   return (
@@ -22,6 +28,8 @@ function App() {
         <ModalProvider>
           <BrowserRouter>
             <AppRouter />
+            <InfoPopup />
+            <ModalRequest />
           </BrowserRouter>
         </ModalProvider>
       </PopupContextProvider>

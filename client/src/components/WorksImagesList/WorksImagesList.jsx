@@ -36,7 +36,7 @@ const WorksImagesList = observer(() => {
               }}
             >
               <img
-                src={`${process.env.REACT_APP_API_URL}/${process.env.REACT_APP_API_URL_WORKS_IMAGES}/${slide.img}`}
+                src={`${process.env.REACT_APP_API_URL_WORKS_IMAGES}/${slide.img}`}
                 alt=""
                 loading="lazy"
               />

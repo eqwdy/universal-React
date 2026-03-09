@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import cl from "./Navbar.module.css";
 import LinkUnderlineTransition from "../link/LinkUnderlineTransition";
-import { ReactComponent as AuthIcon } from "../../../icons/auth.svg";
-import { ReactComponent as BasketIcon } from "../../../icons/basket.svg";
-import { ReactComponent as PencilIcon } from "../../../icons/pencil.svg";
 import { useUserContext } from "../../../context/UserContext";
 import { useBasket } from "../../../hooks/useBasket";
 
@@ -34,7 +31,11 @@ const Navbar = ({ className, linkClass, isIcons = false }) => {
               className={cl.svgButton}
               aria-label="Открыть корзину"
             >
-              <BasketIcon />
+              <img
+                src={`${process.env.REACT_APP_API_URL_ICONS}/basket.svg`}
+                alt=""
+                loading="lazy"
+              />
               {basketItems?.length > 0 ? (
                 <span className={cl.svgButtonNotify}>{basketItems.length}</span>
               ) : null}
@@ -48,7 +49,11 @@ const Navbar = ({ className, linkClass, isIcons = false }) => {
                 className={cl.svgButton}
                 aria-label="Открыть страницу профиля"
               >
-                <AuthIcon />
+                <img
+                  src={`${process.env.REACT_APP_API_URL_ICONS}/auth.svg`}
+                  alt=""
+                  loading="lazy"
+                />
               </button>
             </Link>
           ) : (
@@ -58,7 +63,11 @@ const Navbar = ({ className, linkClass, isIcons = false }) => {
                 className={cl.svgButton}
                 aria-label="Открыть страницу авторизации"
               >
-                <AuthIcon />
+                <img
+                  src={`${process.env.REACT_APP_API_URL_ICONS}/auth.svg`}
+                  alt=""
+                  loading="lazy"
+                />
               </button>
             </Link>
           )}
@@ -70,7 +79,11 @@ const Navbar = ({ className, linkClass, isIcons = false }) => {
                 className={cl.svgButton}
                 aria-label="Открыть корзину"
               >
-                <PencilIcon />
+                <img
+                  src={`${process.env.REACT_APP_API_URL_ICONS}/pencil.svg`}
+                  alt=""
+                  loading="lazy"
+                />
               </button>
             </Link>
           ) : null}

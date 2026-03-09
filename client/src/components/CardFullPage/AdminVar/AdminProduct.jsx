@@ -4,11 +4,9 @@ import Button from "../../UI/button/Button";
 import Loader from "../../UI/Loader/Loader";
 import { usePopupContext } from "../../../context/PopupContext";
 import CatalogStore from "../../../store/CatalogStore";
-import { ReactComponent as RedactPhotoIcon } from "../../../icons/camera-rotate.svg";
 import InputGroup from "./InputGroup/InputGroup";
 import InputColorGroup from "./InputColorGroup/InputColorGroup";
 import CardService from "../../../API/cardsFetch";
-import { ReactComponent as SlashedPencilIcon } from "../../../icons/pencil-slash.svg";
 import { useNavigate } from "react-router-dom";
 import { useAxios } from "../../../hooks/useAxios";
 
@@ -159,7 +157,7 @@ const AdminProduct = ({ id }) => {
           src={
             editedCard.img instanceof File
               ? previewUrl
-              : `${process.env.REACT_APP_API_URL}/${process.env.REACT_APP_API_URL_PRODUCTS}/${editedCard.img}`
+              : `${process.env.REACT_APP_API_URL_PRODUCTS}/${editedCard.img}`
           }
           alt={editedCard.title}
           className={cl.image}
@@ -173,7 +171,11 @@ const AdminProduct = ({ id }) => {
             style={{ display: "none" }}
             onChange={handleImageChange}
           />
-          <RedactPhotoIcon />
+          <img
+            src={`${process.env.REACT_APP_API_URL_ICONS}/camera-rotate.svg`}
+            alt=""
+            loading="lazy"
+          />
         </label>
       </div>
 
@@ -240,7 +242,11 @@ const AdminProduct = ({ id }) => {
         className={cl.closeRedact}
         onClick={moveToProductPageHandle}
       >
-        <SlashedPencilIcon />
+        <img
+          src={`${process.env.REACT_APP_API_URL_ICONS}/pencil-slash.svg`}
+          alt=""
+          loading="lazy"
+        />
       </button>
     </form>
   );

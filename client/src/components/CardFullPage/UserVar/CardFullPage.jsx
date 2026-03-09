@@ -10,7 +10,6 @@ import { usePopupContext } from "../../../context/PopupContext";
 import { getBasket, setBasket } from "../../../utils/basket";
 import CatalogStore from "../../../store/CatalogStore";
 import { useUserContext } from "../../../context/UserContext";
-import { ReactComponent as PencilIcon } from "../../../icons/pencil.svg";
 import { useNavigate } from "react-router-dom";
 
 const CardFullPage = ({ id }) => {
@@ -93,7 +92,7 @@ const CardFullPage = ({ id }) => {
     <article className={cl.card}>
       <div className={cl.cardImg}>
         <img
-          src={`${process.env.REACT_APP_API_URL}/${process.env.REACT_APP_API_URL_PRODUCTS}/${card.img}`}
+          src={`${process.env.REACT_APP_API_URL_PRODUCTS}/${card.img}`}
           alt={card.title}
         />
       </div>
@@ -151,7 +150,11 @@ const CardFullPage = ({ id }) => {
           className={cl.closeRedact}
           onClick={moveToRedactProductPageHandle}
         >
-          <PencilIcon />
+          <img
+            src={`${process.env.REACT_APP_API_URL_ICONS}/pencil.svg`}
+            alt=""
+            loading="lazy"
+          />
         </button>
       )}
     </article>

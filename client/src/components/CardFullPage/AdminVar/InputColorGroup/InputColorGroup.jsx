@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import cl from "./InputColorGroup.module.css";
-import { ReactComponent as RemoveIcon } from "../../../../icons/trash.svg";
 
 const InputColorGroup = ({ items, setItems }) => {
   const safeItems = Array.isArray(items) ? items : [];
@@ -72,7 +71,11 @@ const InputColorGroup = ({ items, setItems }) => {
             onClick={(e) => handleRemoveItem(index)}
             type="button"
           >
-            <RemoveIcon />
+            <img
+              src={`${process.env.REACT_APP_API_URL_ICONS}/trash.svg`}
+              alt=""
+              loading="lazy"
+            />
           </button>
         </div>
       ))}

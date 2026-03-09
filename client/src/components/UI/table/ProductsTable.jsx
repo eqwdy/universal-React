@@ -1,7 +1,6 @@
 import React from "react";
 import cl from "./ProductsTable.module.css";
 import { setBasket } from "../../../utils/basket";
-import { ReactComponent as RemoveIcon } from "../../../icons/remove.svg";
 
 const ProductsTable = ({ products, needToDeleteRows = false }) => {
   const safeItems = Array.isArray(products) ? products : [];
@@ -76,7 +75,11 @@ const ProductsTable = ({ products, needToDeleteRows = false }) => {
                   aria-label="Удалить товар"
                   onClick={() => removeBasketItem(item)}
                 >
-                  <RemoveIcon />
+                  <img
+                    src={`${process.env.REACT_APP_API_URL_ICONS}/remove.svg`}
+                    alt=""
+                    loading="lazy"
+                  />
                 </button>
               </td>
             </tr>

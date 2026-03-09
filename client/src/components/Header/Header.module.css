@@ -16,7 +16,7 @@
   -moz-column-gap: 1em;
   column-gap: 1em;
 }
-.headerContactsItem svg {
+.headerContactsItem img {
   width: 30px;
   aspect-ratio: 1;
 }

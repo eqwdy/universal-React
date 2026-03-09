@@ -60,13 +60,13 @@
 .tableItemDelete:hover {
   background-color: #ffeeed;
 }
-.tableItemDelete svg {
+.tableItemDelete img {
   width: 30px;
   height: 30px;
   fill: #dc3545;
   transition: fill 0.2s;
 }
-.tableItemDelete:hover svg {
+.tableItemDelete:hover img {
   fill: #c82333;
 }
 @media (max-width: 767px) {

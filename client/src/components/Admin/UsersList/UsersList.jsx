@@ -2,7 +2,6 @@ import React from "react";
 import cl from "./UsersList.module.css";
 import { usePopupContext } from "../../../context/PopupContext";
 import UserService from "../../../API/UserFetch";
-import { ReactComponent as DeleteIcon } from "../../../icons/remove.svg";
 import ButtonUser from "../../UI/button/OpenModal/ButtonUser";
 import { usePeoplesContext } from "../../../context/PeoplesContext";
 
@@ -37,7 +36,11 @@ const UsersSection = () => {
                       }
                     }}
                   >
-                    <DeleteIcon />
+                    <img
+                      src={`${process.env.REACT_APP_API_URL_ICONS}/remove.svg`}
+                      alt=""
+                      loading="lazy"
+                    />
                   </button>
                 </div>
               </li>
