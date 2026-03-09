@@ -1,0 +1,57 @@
+.headerInner {
+  padding-block: 0px !important;
+}
+.headerContacts {
+  margin-bottom: 3px;
+  padding-block: 10px;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.3137254902);
+}
+.headerContactsItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerContactsItem {
+  display: flex;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+}
+.headerContactsItem svg {
+  width: 30px;
+  aspect-ratio: 1;
+}
+.headerContactsItem:last-of-type {
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+.headerContactsPhone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.2em;
+  column-gap: 0.2em;
+}
+.headerContactsAddress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.3em;
+  column-gap: 0.3em;
+}
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+}
+.navLink {
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+}

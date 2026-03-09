@@ -1,0 +1,55 @@
+.svgButton {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  position: relative;
+}
+.svgButton svg {
+  width: 30px;
+  aspect-ratio: 1;
+  transition: 0.1s ease;
+}
+.svgButtonNotify {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  background: #f55123;
+  border-radius: 16px;
+  min-width: 16px;
+  height: 16px;
+  padding: 2px 3px 1px;
+  font-size: 10px;
+  line-height: 13px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+}
+@media (hover: hover) {
+  .svgButton:hover {
+    cursor: pointer;
+  }
+  .svgButton:hover svg {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .svgButton:hover img {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .svgButton:active {
+    cursor: pointer;
+  }
+  .svgButton:active svg {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .svgButton:active img {
+    opacity: 0.6;
+  }
+}

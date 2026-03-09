@@ -1,0 +1,66 @@
+.usersTitle {
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.usersList {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  /* row-gap: 10px; */
+}
+.usersItem {
+  position: relative;
+}
+
+.user {
+  --padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-bottom: var(--padding-bottom);
+  padding-top: var(--padding-bottom);
+}
+.userInfo {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em;
+}
+.usersItem::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--padding-bottom) / -2);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.usersItem:first-of-type .user {
+  padding-top: 0;
+}
+.usersItem:last-of-type .user {
+  padding-bottom: 0;
+}
+.usersItem:last-of-type::after {
+  display: none;
+}
+.userButton {
+  border: none;
+  background: none;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.userButton svg {
+  width: 30px;
+  aspect-ratio: 1;
+  fill: red;
+}

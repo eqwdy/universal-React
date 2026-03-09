@@ -1,0 +1,119 @@
+.popup {
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+  padding: 20px 40px 20px 30px;
+  font-size: 1.125rem;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  transform: translate(120%) scale(0.5);
+  transition: var(--transition-button);
+  z-index: 99;
+}
+.popup[aria-hidden="false"] {
+  display: block;
+  transform: translate(0) scale(1);
+}
+.popupClose {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  width: 30px;
+  aspect-ratio: 1;
+  --close-color: black;
+}
+.popupClose::after,
+.popupClose::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background-color: var(--close-color);
+  transition: var(--transition-button);
+}
+.popupClose::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.popupClose::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+@media (hover: hover) {
+  .popupClose:hover {
+    cursor: pointer;
+    --close-color: rgba(0, 0, 0, 0.6);
+  }
+}
+@media (hover: none) {
+  .popupClose:active {
+    cursor: pointer;
+    --close-color: rgba(0, 0, 0, 0.6);
+  }
+}
+.popupInner {
+  display: flex;
+  flex-direction: column;
+}
+.popupInner span:first-child {
+  font-weight: 600;
+  line-height: 1.2;
+}
+.popupInner span:last-child {
+  font-size: 1rem;
+}
+.popupTimer {
+  --color-popup-timer-green: #4caf50;
+  --color-popup-timer-red: #f44336;
+  height: 4px;
+  background-color: #ccc;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+/* .popup[aria-hidden="false"] .popupTimer {
+  animation: timerBar 3s linear forwards;
+} */
+@keyframes timerBar {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+.shake {
+  animation: shake 0.3s;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, 2px);
+  }
+  40% {
+    transform: translate(5px, -2px);
+  }
+  60% {
+    transform: translate(-5px, -2px);
+  }
+  80% {
+    transform: translate(5px, 2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.good {
+  background-color: var(--color-popup-timer-green);
+  animation: 3s linear 0s 1 normal forwards running timerBar;
+}
+
+.bad {
+  background-color: var(--color-popup-timer-red);
+  animation: 3s linear 0s 1 normal forwards running timerBar;
+  /* animation: 0.3s linear shake; */
+}

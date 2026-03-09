@@ -1,0 +1,33 @@
+.hero {
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--hero-bg-url) center center/cover no-repeat;
+  background-color: black;
+  filter: brightness(0.5);
+}
+.heroInner {
+  padding-block: 150px;
+  max-width: 739px;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 610px) {
+  .heroTitle {
+    margin-bottom: 20px;
+  }
+}
+.heroDescription {
+  padding-inline: 5px;
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 610px) {
+  .heroDescription {
+    display: none;
+  }
+}

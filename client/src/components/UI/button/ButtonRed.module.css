@@ -1,0 +1,28 @@
+.buttonRed {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-size: 1.25rem;
+  background-color: var(--color-maroon);
+  transition: var(--transition-button);
+}
+@media (hover: hover) {
+  .buttonRed:hover {
+    background-color: var(--color-maroon-tint);
+  }
+}
+@media (hover: none) {
+  .buttonRed:active {
+    background-color: var(--color-maroon-tint);
+  }
+}
+.buttonRed:active {
+  background-color: var(--color-maroon);
+}
+
+@media (max-width: 610px) {
+  .buttonRed {
+    font-size: 1.125rem;
+  }
+}

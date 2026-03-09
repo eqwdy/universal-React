@@ -1,0 +1,43 @@
+.buttonArrowDown {
+  position: relative;
+  text-decoration: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 42px;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  background-color: var(--color-primary-green);
+  transition: var(--transition-button);
+  cursor: pointer;
+}
+.buttonArrowDown::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  aspect-ratio: 1;
+  background: url("../../../../icons/arrow-down.svg") center/cover no-repeat;
+}
+
+@media (hover: hover) {
+  .buttonArrowDown:hover {
+    background-color: var(--color-tint-green);
+  }
+}
+@media (hover: none) {
+  .buttonArrowDown:active {
+    background-color: var(--color-tint-green);
+  }
+}
+.buttonArrowDown:active {
+  background-color: var(--color-primary-green);
+}
+@media (max-width: 610px) {
+  .buttonArrowDown {
+    font-size: 1.125rem;
+  }
+}

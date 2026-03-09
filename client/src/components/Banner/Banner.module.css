@@ -1,0 +1,11 @@
+.banner {
+  color: white;
+  background-color: var(--color-dark-gray);
+}
+.bannerTitle {
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.bannerDescription {
+  margin-bottom: 20px;
+}

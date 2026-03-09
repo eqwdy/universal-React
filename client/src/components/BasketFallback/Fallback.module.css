@@ -1,0 +1,33 @@
+.fallback {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.fallbackImg {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  justify-self: end;
+}
+.fallbackTitle {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.fallbackDescription {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.fallbackButton {
+  background-color: #d98c4d;
+}
+@media (hover: hover) {
+  .fallbackButton:hover {
+    background-color: #db9861;
+  }
+}
+@media (hover: none) {
+  .fallbackButton:active {
+    background-color: #db9861;
+  }
+}

@@ -1,0 +1,91 @@
+.table {
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.tableWrapper {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.tableTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.tableItems {
+  width: 100%;
+}
+.tableItems th,
+.tableItems td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.tableItems th {
+  font-weight: 600;
+  color: #555;
+  background-color: #f9f9f9;
+  white-space: nowrap;
+}
+.tableItems td {
+  color: #333;
+}
+.tableItemsDelete td:last-child {
+  text-align: left;
+  padding: 0;
+  width: 1%;
+  white-space: nowrap;
+  border: none;
+}
+.tableItemDelete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+.tableItemDelete:hover {
+  background-color: #ffeeed;
+}
+.tableItemDelete svg {
+  width: 30px;
+  height: 30px;
+  fill: #dc3545;
+  transition: fill 0.2s;
+}
+.tableItemDelete:hover svg {
+  fill: #c82333;
+}
+@media (max-width: 767px) {
+  .tableTitle {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  .tableItems th,
+  .tableItems td {
+    padding: 10px 12px;
+  }
+  .tableItemsDelete td:last-child,
+  .tableItemsDelete th:last-child {
+    width: auto;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+.totalPrice {
+  font-size: 1.125rem;
+}

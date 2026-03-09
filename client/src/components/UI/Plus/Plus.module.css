@@ -1,0 +1,78 @@
+.plus {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: var(--transition-button);
+}
+.plusTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+  width: 100%;
+}
+.plusTitleWrapper {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+.plusTitleSvgWrapper {
+  background-color: var(--color-tint-green);
+  border-radius: 50%;
+  flex: 0 0 35px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.plusTitle svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 20px;
+  aspect-ratio: 1;
+}
+.plusTitleHeader {
+  font-weight: 400;
+  line-height: 1.2;
+}
+.plusStatus {
+  position: relative;
+  flex: 0 0 28px;
+  aspect-ratio: 1;
+  transition: var(--transition-button);
+}
+.plusStatus::after,
+.plusStatus::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 2px;
+  background-color: var(--color-white-gray);
+}
+.plusStatus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.plusDescription {
+  overflow: hidden;
+  color: var(--color-light-gray);
+  transition: var(--transition-button);
+}
+@media (hover: hover) {
+  .plus:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+  }
+}
+.plus[aria-expanded="true"] .plusStatus {
+  rotate: -45deg;
+}
+.plus[aria-expanded="true"] .plusDescription {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}

@@ -1,0 +1,38 @@
+.title {
+  margin-bottom: 20px;
+}
+.body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.bodyItem {
+  display: flex;
+}
+.bodyItem:last-of-type {
+  justify-content: center;
+}
+@media (max-width: 850px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .bodyItem {
+    justify-content: center;
+  }
+}
+.buttonContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 10px;
+}
+/* style={{
+          marginTop: "20px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "start",
+          rowGap: "10px",
+        }} */

@@ -1,0 +1,97 @@
+.slider {
+  margin-bottom: 20px;
+  max-width: 1000px;
+  margin-inline: auto;
+  aspect-ratio: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.sliderRelative {
+  position: relative;
+}
+.sliderItems {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 15px;
+}
+.sliderItems::-webkit-scrollbar {
+  display: none;
+}
+.sliderItem {
+  flex: 1 0 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+.sliderItem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.sliderButtons {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.sliderButton {
+  width: clamp(60px, 9%, 150px);
+  aspect-ratio: 1;
+  border: none;
+  background: none;
+  transition: var(--transition-button);
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.sliderButton > svg {
+  width: 100%;
+  height: 100%;
+}
+@media (hover: hover) {
+  .sliderButton:hover {
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .sliderButton:active {
+    opacity: 1;
+  }
+}
+
+.sliderButtonModal {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(60px, 9%, 150px);
+  aspect-ratio: 1;
+  border: none;
+  background: none;
+  transition: var(--transition-button);
+  opacity: 0.6;
+}
+.sliderButtonModal:first-of-type {
+  left: 0;
+}
+.sliderButtonModal:last-of-type {
+  right: 0;
+}

@@ -1,0 +1,42 @@
+.buttonArrow {
+  text-decoration: none;
+  position: relative;
+  background-color: var(--color-primary-green);
+  border: none;
+  padding: 10px;
+  padding-right: 35px;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  transition: var(--transition-button);
+  cursor: pointer;
+}
+.buttonArrow::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  aspect-ratio: 1;
+  background: url("../../../../icons/Arrow.svg") center/cover no-repeat;
+}
+
+@media (hover: hover) {
+  .buttonArrow:hover {
+    background-color: var(--color-tint-green);
+  }
+}
+@media (hover: none) {
+  .buttonArrow:active {
+    background-color: var(--color-tint-green);
+  }
+}
+.buttonArrow:active {
+  background-color: var(--color-primary-green);
+}
+@media (max-width: 610px) {
+  .buttonArrow {
+    font-size: 1.125rem;
+  }
+}

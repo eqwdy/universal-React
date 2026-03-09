@@ -1,0 +1,32 @@
+.RadioColorGroup {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+.RadioColorButton {
+  max-width: 50px;
+  width: 100%;
+  aspect-ratio: 1;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.RadioColorButton:focus {
+  outline: none;
+}
+.RadioColorButton:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+.RadioColorButton[aria-checked="true"] {
+  border: 2px solid var(--color-primary-green);
+  box-shadow: 0 0 5px var(--color-primary-green);
+}
+.RadioColorButton > div {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}

@@ -1,0 +1,10 @@
+.requestItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+.requestItem {
+  width: 100%;
+}

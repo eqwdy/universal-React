@@ -1,0 +1,32 @@
+.buttonRequest {
+  border: none;
+  color: white;
+  background-color: var(--color-primary-green);
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  transition: var(--transition-button);
+}
+@media (max-width: 610px) {
+  .buttonRequest {
+    font-size: 1.2rem;
+  }
+}
+@media (hover: hover) {
+  .buttonRequest:hover {
+    background-color: var(--color-tint-green);
+  }
+}
+@media (hover: none) {
+  .buttonRequest:active {
+    background-color: var(--color-tint-green);
+  }
+}
+.buttonRequest:active {
+  background-color: var(--color-primary-green);
+}
+@media (max-width: 610px) {
+  .buttonRequest {
+    font-size: 1.125rem;
+  }
+}

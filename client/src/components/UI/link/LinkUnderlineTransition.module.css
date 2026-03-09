@@ -1,0 +1,25 @@
+.linkUnderlineTransition {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.linkUnderlineTransition::after {
+  content: "";
+  position: absolute;
+  bottom: calc(50% - 0.9em);
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: var(--transition-button);
+}
+
+@media (hover: hover) {
+  .linkUnderlineTransition:hover {
+    cursor: pointer;
+  }
+  .linkUnderlineTransition:hover::after {
+    width: 100%;
+  }
+}
